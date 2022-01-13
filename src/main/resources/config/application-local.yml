@@ -1,0 +1,18 @@
+logging:
+  level:
+    root: info
+    org.springframework: info
+    com.redeyefrog: debug
+  pattern:
+    console: "%red(%d{yyyy-MM-dd HH:mm:ss}) %yellow([%thread]) %highlight(%-5level) %logger - %green(%msg%n)"
+
+springdoc:
+  group-configs:
+    -
+      group: Hello World
+      packages-to-scan: com.redeyefrog.controller
+      paths-to-match: /**
+    -
+      group: API
+      packages-to-scan: com.redeyefrog.controller
+      paths-to-match: /api/**
