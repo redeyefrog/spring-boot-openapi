@@ -1,6 +1,6 @@
-# Open API
+# OpenAPI 3.0
 
-### *Plugin*
+### *Set up springdoc-openapi*
 ```xml
 <dependency>
     <groupId>org.springdoc</groupId>
