@@ -37,18 +37,27 @@ springdoc:
 public class SwaggerConfig {
 
   @Bean
-  public GroupedOpenApi groupedOpenApi() {
+  public GroupedOpenApi group1OpenApi() {
     return GroupedOpenApi.builder()
-            .group("GroupName")
+            .group("GroupName1")
             .packagesToScan("com.package1")
-            .pathsToMatch("/**")
+            .pathsToMatch("/v1/**")
             .build();
   }
 
   @Bean
+  public GroupedOpenApi group2OpenApi() {
+    return GroupedOpenApi.builder()
+            .group("GroupName2")
+            .packagesToScan("com.package2")
+            .pathsToMatch("/v2/**")
+            .build();
+  }
+  
+  @Bean
   public OpenAPI openApi() {
     Info info = new Info().title("Open API Title")
-            .description("Description API")
+            .description("Description Open API")
             .version("v1.0");
 
     return new OpenAPI()
