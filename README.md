@@ -1,6 +1,6 @@
 # Open API
 
-#### *Plugin*
+### *Plugin*
 ```xml
 <dependency>
     <groupId>org.springdoc</groupId>
@@ -16,7 +16,7 @@ This will automatically deploy swagger-ui to a spring-boot application:
   * context-path: The context path of the application
 * Documentation can be available in yaml format as well, on the following path : /v3/api-docs.yaml
 
-#### *No Configuration*
+### *No Configuration*
 * add Properties and add ``@OpenAPIDefinition`` to Controller
 ```yaml
 springdoc:
@@ -31,7 +31,7 @@ springdoc:
       paths-to-match: /v1/**
 ```
 
-#### *Configuration*
+### *Configuration*
 ```java
 @Configuration
 public class SwaggerConfig {

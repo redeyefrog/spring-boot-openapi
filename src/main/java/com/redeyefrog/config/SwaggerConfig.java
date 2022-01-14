@@ -11,11 +11,20 @@ import org.springframework.context.annotation.Bean;
 public class SwaggerConfig {
 
     @Bean
-    public GroupedOpenApi groupedOpenApi() {
+    public GroupedOpenApi helloOpenApi() {
         return GroupedOpenApi.builder()
-                .group("RedEyeFrog")
+                .group("Hello World")
                 .packagesToScan("com.redeyefrog.controller")
                 .pathsToMatch("/**")
+                .build();
+    }
+
+    @Bean
+    public GroupedOpenApi apiOpenApi() {
+        return GroupedOpenApi.builder()
+                .group("API")
+                .packagesToScan("com.redeyefrog.controller")
+                .pathsToMatch("/api/**")
                 .build();
     }
 
@@ -26,8 +35,8 @@ public class SwaggerConfig {
                 .url("https://github.com/redeyefrog")
                 .email("redeyefrog@contact.com");
 
-        Info info = new Info().title("Red Eye Frog")
-                .description("Description Red Eye Frog")
+        Info info = new Info().title("Hello Red Eye Frog")
+                .description("This is Open API")
                 .version("v1.0")
                 .contact(contact);
 
