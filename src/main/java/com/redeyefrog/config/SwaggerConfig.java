@@ -1,5 +1,6 @@
 package com.redeyefrog.config;
 
+import com.redeyefrog.controller.ApiController;
 import io.swagger.v3.oas.models.ExternalDocumentation;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
@@ -13,7 +14,7 @@ public class SwaggerConfig {
     @Bean
     public GroupedOpenApi helloOpenApi() {
         return GroupedOpenApi.builder()
-                .group("Hello World")
+                .group("HelloWorld")
                 .packagesToScan("com.redeyefrog.controller")
                 .pathsToMatch("/**")
                 .build();
@@ -23,7 +24,7 @@ public class SwaggerConfig {
     public GroupedOpenApi apiOpenApi() {
         return GroupedOpenApi.builder()
                 .group("API")
-                .packagesToScan("com.redeyefrog.controller")
+                .packagesToScan(ApiController.class.getPackageName())
                 .pathsToMatch("/api/**")
                 .build();
     }

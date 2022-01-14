@@ -9,7 +9,7 @@ logging:
 springdoc:
   group-configs:
     -
-      group: Hello World
+      group: HelloWorld
       packages-to-scan: com.redeyefrog.controller
       paths-to-match: /**
     -
