@@ -5,7 +5,7 @@
 <dependency>
     <groupId>org.springdoc</groupId>
     <artifactId>springdoc-openapi-ui</artifactId>
-    <version>${openapi.version}</version>
+    <version>1.6.4</version>
 </dependency>
 ```
 This will automatically deploy swagger-ui to a spring-boot application:
